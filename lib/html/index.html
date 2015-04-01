@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>solo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <script src="script/main.js"></script>
-  
+<meta charset="UTF-8">
+<title>solo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/global.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<script src="script/zepto.min.js"></script>
+<script src="script/frozen.js"></script>
+
 </head>
 <body>
+<h2 class="title ui-border-b">
+    <a href="/"  class="ui-arrowlink">聊天室</a>
+</h2>
+<div class="content">
+	<div  class="ui-searchbar-wrap ui-border-b">
+        <div class="ui-searchbar">
+            <div class="ui-searchbar-text">发言</div>
+            <div class="ui-searchbar-input"><input value="" type="text" placeholder="发言" autocapitalize="off" id="cont"></div>
+        </div>
+    
+    <button class="ui-btn ui-btn-primary" id="send" onClick="setup(document.getElementById('cont').value,ws)">确定</button>
+</div> 
+</div> 
+<ul class="ui-list ui-border-tb">  
+    
+  
+</ul>
+<div id="output"></div>
+<script src="script/main.js"></script>
 </body>
 </html>
