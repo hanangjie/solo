@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="css/global.css">
 <link rel="stylesheet" type="text/css" href="css/demo.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <script src="script/zepto.min.js"></script>
 <script src="script/frozen.js"></script>
 
@@ -23,12 +24,40 @@
         </div>
     </div>        
 </div>
+
+<div class="ui-dialog" id="warmLoginOut">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+            <h4>提示</h4>
+            <div>确认退出账号吗！</div>
+        </div>
+        <div class="ui-dialog-ft ui-btn-group">
+            <button type="button" id="wram_no" onclick="warmLoginOutNo()">还是再想想吧！</button>
+            <button type="button" id="wram_yes" onclick="warmLoginOutYes()">确认了</button>
+        </div>
+    </div>        
+</div>
 <div id="enter">
-	
-     <div class="ui-form-item ui-border-b">
-        <label for="#">
-            昵称
+<ul class="ui-list ui-list-text ui-list-radio">
+    <li class="ui-border-t">
+        <label class="ui-radio" for="radio">
+            <input type="radio" checked="" name="Sex" value="girl"  />
         </label>
+        <p>
+            女
+        </p>
+    </li>
+    <li class="ui-border-t">
+        <label class="ui-radio" for="radio">
+            <input type="radio" name="Sex" value="boy" />
+        </label>
+        <p>
+            男
+        </p>
+    </li>
+</ul>
+     <div class="ui-form-item ui-border-b">
+        <label for="#">昵称</label>
         <input type="text" placeholder="昵称" id="user_name" />
         <a href="#" class="ui-icon-close">
         </a>
@@ -41,7 +70,10 @@
 <div id="first" style="display:none;">
     <h2 class="title ui-border-b">
         <a href="/" class="ui-arrowlink">聊天室</a>
+        <a class="ui-btn online" href="javascript:;" id="num">人：1000</a>
+        <a class="ui-btn" href="javascript:;" onclick="loginout()">退出</a>
     </h2>
+    <h2 class="title ui-border-b sendLabel">
     <div class="content">
         <div  class="ui-searchbar-wrap ui-border-b">
             <div class="ui-searchbar">
@@ -52,7 +84,8 @@
             <button class="ui-btn ui-btn-primary" id="send" onClick="setup(document.getElementById('cont').value,ws)">确定</button>
         </div> 
     </div>
-    <ul class="ui-list ui-border-tb">  
+    </h2>
+    <ul class="ui-list ui-border-tb sendList" id="contList">  
         
       
     </ul>
