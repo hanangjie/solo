@@ -6,4 +6,4 @@
 .sendList{margin-top:45px;}
 .online{margin-right:65px;}
 .loading{margin-top:90px;position:absolute;width:100%;top:0px;left:0px;z-index:0;}
-#first{position:relative;z-index:1;}
+#first,#enter{position:relative;z-index:1;}
