@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>位置</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="http://developer.baidu.com/favicon.ico" />
+
+<script src="../script/zepto.min.js"></script>
+<script src="../script/frozen.js"></script>
+    <script src="../script/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/demo.css">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+</head>
+<body class="login">
+    <h2 class="title ui-border-b">
+        <a href="/" class="ui-arrowlink " style="text-align: center">聊天室</a>
+
+    </h2>
+    <div class="content">
+        <form action="/upload.haj"  method="post"  enctype="multipart/form-data" id="avator" target="avator">
+            <div class="ui-form-item ui-border-b">
+                <input type="file" class="upload" name="upload"/>
+            </div>
+        </form>
+        <iframe name="avator" id="uploadIframe" style="display: none;"></iframe>
+        <form id="userInfo" >
+        <div class="ui-form-item ui-border-b">
+            <label for="#">
+                用户名
+            </label>
+            <input type="text" name="name" placeholder="用户名" />
+            <a href="#" class="ui-icon-close">
+            </a>
+        </div>
+        <div class="ui-border-b sex">
+            <label class="ui-radio" for="radio">
+                <input type="radio" name="radio" checked value="0">
+            </label><span>男</span>
+            <label class="ui-radio" for="radio"  value="1">
+                <input type="radio" name="radio"><span>女</span>
+            </label>
+        </div>
+        <div class="ui-form-item ui-border-b">
+            <label for="#">
+                QQ
+            </label>
+            <input type="text" placeholder="QQ" name="qq" />
+            <a href="#" class="ui-icon-close">
+            </a>
+        </div>
+        <div class="ui-form-item ui-border-b">
+            <label for="#">
+                微信
+            </label>
+            <input type="text" placeholder="微信" name="wx" />
+            <a href="#" class="ui-icon-close">
+            </a>
+        </div>
+        <div class="ui-form-item ui-border-b">
+            <label for="#">
+                手机号
+            </label>
+            <input type="text" placeholder="手机号"  name="phone" />
+            <a href="#" class="ui-icon-close">
+            </a>
+        </div>
+        <span class="ui-btn ui-btn-primary" id="submit">
+            确定
+        </span>
+        </form>
+    </div>
+</body>
+</html>
