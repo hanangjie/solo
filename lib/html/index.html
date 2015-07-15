@@ -15,6 +15,14 @@
 
 </head>
 <body>
+<div id="youkuplayer" style="width:480px;height:400px"></div>
+<script type="text/javascript" src="http://player.youku.com/jsapi">
+player = new YKU.Player('youkuplayer',{
+styleid: '0',
+client_id: 'ca32cff238d149a7',
+vid: 'XOTI0NzM1NjI4'
+});
+</script>
 <div class="ui-loading-wrap loading">
     <p>加载中</p>
     <i class="ui-loading"></i>
@@ -26,8 +34,8 @@
             <div>起码给个昵称，叫啥都行！</div>
         </div>
         <div class="ui-dialog-ft ui-btn-group">
-            <button type="button" id="wram_no" onclick="warmNo()">就是不给！</button>
-            <button type="button" id="wram_yes" onclick="warmYes()">好的</button>
+            <button type="button" id="wram_no" onClick="warmNo()">就是不给！</button>
+            <button type="button" id="wram_yes" onClick="warmYes()">好的</button>
         </div>
     </div>        
 </div>
@@ -39,8 +47,8 @@
             <div>确认退出账号吗！</div>
         </div>
         <div class="ui-dialog-ft ui-btn-group">
-            <button type="button" id="wram_no" onclick="warmLoginOutNo()">还是再想想吧！</button>
-            <button type="button" id="wram_yes" onclick="warmLoginOutYes()">确认了</button>
+            <button type="button" id="wram_no" onClick="warmLoginOutNo()">还是再想想吧！</button>
+            <button type="button" id="wram_yes" onClick="warmLoginOutYes()">确认了</button>
         </div>
     </div>        
 </div>
@@ -78,7 +86,7 @@
     <h2 class="title ui-border-b">
         <a href="/" class="ui-arrowlink">聊天室</a>
         <a class="ui-btn online" href="javascript:;" id="num" style="display:none;">人：1000</a>
-        <a class="ui-btn" href="javascript:;" onclick="loginout()">退出</a>
+        <a class="ui-btn" href="javascript:;" onClick="loginout()">退出</a>
     </h2>
     <h2 class="title ui-border-b sendLabel">
     <div class="content">
